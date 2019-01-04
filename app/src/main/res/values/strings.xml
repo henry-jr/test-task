@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RSSFeedTest</string>
+    <string name="action_share">Share</string>
+    <string name="action_open_browser">Open in browser</string>
+    <string name="share">Share</string>
+
+    <!-- HINT -->
+    <string name="hint_get">GET</string>
+    <string name="hint_rss_url">RSS URL</string>
+
+    <!-- Messages -->
+    <string name="invalid_rss_url">Enter a valid RSS url.</string>
+</resources>
