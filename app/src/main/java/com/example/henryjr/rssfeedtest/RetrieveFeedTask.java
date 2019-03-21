@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Xml;
+import android.webkit.URLUtil;
 import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -35,6 +36,9 @@ public class RetrieveFeedTask extends AsyncTask<String, Void, List<FeedModel>> {
         try {
             if (!urlLink.startsWith("http://") && !urlLink.startsWith("https://"))
                 urlLink = "http://" + urlLink;
+
+            if (!URLUtil.isValidUrl(urlLink))
+                return null;
 
             URL url = new URL(urlLink);
             InputStream inputStream = url.openConnection().getInputStream();
